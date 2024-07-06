@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/download.jpg">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Home Page</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f0f0f0;
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: cursive;
+        }
+        .homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:20% ;
+            
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+           font-weight: 900;
+           font-size: 35px;
+           font-family: cursive;
+    
+            
+        }
+        .home{
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px 0 0;
+        }
+
+        
+
+
+        .container {
+            margin-top: 150px;
+            display: flex;
+            justify-content: space-around;
+         
+        }
+        .air-quality{
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(218, 210, 210);
+            margin: 0 auto;
+            border-radius: 20px;
+            transition:  0.2s all linear ;
+        }
+        .air-quality h1{
+            font-weight: 700;
+
+           
+        }
+        .control-led{
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(218, 208, 208);
+            margin: 0 auto;
+            border-radius: 20px;
+            transition: 0.2s all linear ;
+        }
+        .Automation{
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(218, 208, 208);
+            margin: 0 auto;
+            border-radius: 20px;
+            transition: 0.2s all linear;
+        }
+        .control-led h1{
+            font-weight: 700;
+            
+            
+        }
+        .Automation h1{
+            font-weight: 700;
+            
+            
+        }
+        img{
+            width: 80%;
+           
+           
+        }
+        .page1{
+           width: 25%;
+         
+        }
+        .page2{
+            width: 25%;
+         
+        }
+        .page3{
+            width: 25%;
+         
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            
+        
+        }
+        .control-led:hover{
+            background-color: chartreuse;
+            transform: scale(1.1,1.1);
+        }
+        .air-quality:hover{
+            background-color: chartreuse;
+            transform: scale(1.1,1.1);
+          
+        }
+        
+        .Automation:hover{
+            background-color: chartreuse;
+            transform: scale(1.1,1.1);
+          
+        }
+
+        @media screen and (max-width:600px){
+
+            .homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:100% ;
+           
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+           font-weight: 900;
+           font-size: 35px;
+           font-family: cursive;
+    
+            
+        }
+        .home{
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px 0 0;
+        }
+
+        
+
+
+            .container{
+                display: block;
+                justify-content: center;
+                margin-left: 90px;
+            }
+            .air-quality{
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            height: 30vh;
+            background-color: rgb(218, 210, 210);
+           
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s  all ;
+           
+        }
+        .air-quality h1{
+            font-weight: 500;
+            font-size: 20px;
+            
+           
+        }
+        .page1{
+           width: 50%;
+         
+         
+        }
+        .control-led{
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            height: 30vh;
+            background-color: rgb(218, 210, 210);
+           
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s 0.5s all ;
+           
+        }
+        .control-led h1{
+            font-weight: 500;
+            font-size: 20px;
+            
+           
+        }
+        .page2{
+           width: 50%;
+         
+         
+        }
+        .Automation{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            height: 30vh;
+            background-color: rgb(218, 210, 210);
+           
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s 0.5s all ;
+           
+        }
+        .Automation h1{
+            font-weight: 500;
+            font-size: 20px;
+            
+           
+        }
+        .page3{
+           width: 50%;
+         
+         
+        }
+
+ 
+        }
+
+      
+    
+  
+    </style>
+</head>
+<body>
+   <div class="homepage">
+    <img class="home" src="./img/house.png" alt="">
+    <h1>Home Page</h1>
+    <!-- <img class="home" src="./img/home-button.png" alt=""> -->
+   </div>
+    <div class="container">
+        
+        <div class="page1">
+            <a href="./Readings.html">
+                <div class="air-quality">
+                
+                    <h1>Readings</h1>
+                    <img src="./img/default_template.png" alt="">
+                </div>
+              </a>
+
+        </div>
+   
+      <div class="page2">
+        <a href="./DevicesControl.html">
+            <div class="control-led">
+                    <h1>Devices Control</h1>
+                    <img src="./img/default_template.png" alt="">
+            </div>
+          </a>
+        
+
+      </div>
+   
+      <div class="page3">
+        <a href="./Automation.html">
+            <div class="Automation">
+                    <h1>Automation</h1>
+                    <img src="./img/default_template.png" alt="">
+            </div>
+          </a>
+        
+
+      </div>
+ 
+       
+     
+    </div>
+    
+</body>
+</html>

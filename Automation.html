@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/pngtree-agricultural-technology-mobile-phone-synthesis-background-image_784693.jpg">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Automation</title>
+    <style>
+                 *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            /* background-color: #f0f0f0; */
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: cursive;
+        }
+        .homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:30% ;
+            margin-bottom: 50px;
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+           font-weight: 900;
+           font-size: 35px;
+           font-family: cursive;
+    
+            
+        }
+        .home{
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px 0 0;
+        }
+       
+        .tableAll{
+        
+        width: 90%;
+        margin: 0px auto;
+        font-size: 20px;
+        }
+
+        tr{
+            background-color: white;
+        }
+
+       
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 2px;
+            font-size: 25px;
+            font-weight: 400;
+            
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .action-button {
+            color: black;
+            font-size: 22px;
+            padding: 1px 2px;
+            margin: 2px;
+        }
+
+
+
+        tr:first-child th:first-child{
+            border-top-left-radius: 10px;
+        }
+        tr:first-child th:last-child{
+            border-top-right-radius: 10px;
+        }
+       
+
+        @media screen and (max-width: 768px) {
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: cursive;
+        }
+            .homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:100% ;
+            margin-bottom: 50px;
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+            margin-top: 5px;
+           font-weight: 900;
+           font-size: 15px;
+           font-family: cursive;
+    
+            
+        }
+            .home{
+            width: 30px;
+            height: 30px;
+            
+        }
+        .tableAll{
+            width: 100%;
+       
+        font-size: 7px;
+       
+        
+       
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 2px;
+            font-size: 10px;
+            font-weight: 200;
+            
+           
+          
+            
+        }
+      
+    
+        .action-button {
+            /* padding: 1px 2px; */
+            width: 30px;
+            font-size: 10px;
+        }
+.input-group-text{
+    font-size: 10px;
+}
+
+.form-select{
+    font-size: 5px;
+    width: 5px;
+}
+.form-control {
+    font-size: 5px;
+    width: 30px;
+}
+.btn-primary {
+    font-size: 10px;
+    width: 40px;
+}
+.btn-warning{
+    font-size: 10px;
+    width: 40px;
+}
+.btn-danger{
+    font-size: 10px;
+    width: 40px;
+}
+
+    }
+          .disabled-row {
+                    background-color: red !important;
+               }
+
+
+    </style>
+</head>
+<body>
+   
+    
+
+    <div class="homepage">
+        <img class="home" src="./img/table.png" alt="">
+        <h1>Automation Table</h1>
+        
+       </div>
+
+
+
+
+
+    <table class="tableAll  ">
+        <thead class="">
+            <tr>
+                <th>Sensors</th>
+                <th>Marks</th>
+                <th>Values</th>
+                <th>Devices Control</th>
+                <th>Status</th>
+                <th>Save</th>
+                <th>Edit</th>
+                <th>Stop</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="temperature " data-row-id="row1">
+                <td class="">Temperature</td>
+                <td class="select-cell">
+                    
+                       
+                        
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Mark</label>
+                            <select class="form-select" id="inputGroupSelect01" disabled>
+                              <option selected></option>
+                              <option value="<">&lt;</option>
+                              <option value=">">&gt;</option>
+                              <option value="=">=</option>
+                            </select>
+                          </div>
+                 
+                </td>
+                <td class="number-cell">
+                    <input type="number" disabled placeholder="Enter Value" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" disabled>
+                
+                </td>
+                <td>Fan</td>
+                <td>On</td>
+                <td><button class="action-button save-button  btn btn-primary "  onclick="saveRow(this)" disabled>Save</button></td>
+                <td><button class="action-button edit-button btn btn-warning" onclick="editRow(this)">Edit</button></td>
+                <td><button class="action-button stop-button btn btn-danger" onclick="stopRow(this)">Stop</button></td>
+            </tr>
+            <tr class="humidity  " data-row-id="row2">
+                <td class="">Humidity</td>
+                <td class="select-cell">
+                   
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Mark</label>
+                        <select class="form-select" id="inputGroupSelect01" disabled>
+                          <option selected></option>
+                          <option value="<">&lt;</option>
+                          <option value=">">&gt;</option>
+                          <option value="=">=</option>
+                        </select>
+                      </div>
+                </td>
+                <td class="number-cell">
+                    <input type="number" disabled placeholder="Enter Value" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                </td>
+                <td>Orange</td>
+                <td>On</td>
+                <td><button class="action-button save-button btn btn-primary" onclick="saveRow(this)" disabled>Save</button></td>
+                <td><button class="action-button edit-button btn btn-warning" onclick="editRow(this)">Edit</button></td>
+                <td><button class="action-button stop-button btn btn-danger" onclick="stopRow(this)">Stop</button></td>
+            </tr>
+            <tr class="gas " data-row-id="row3">
+                <td class="">Gas</td>
+                <td class="select-cell">
+                    
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Mark</label>
+                        <select class="form-select" id="inputGroupSelect01" disabled>
+                          <option selected></option>
+                          <option value="<">&lt;</option>
+                          <option value=">">&gt;</option>
+                          <option value="=">=</option>
+                        </select>
+                      </div>
+                </td>
+                <td class="number-cell">
+                    <input type="number" disabled placeholder="Enter Value" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                </td>
+                <td>Red</td>
+                <td>On</td>
+                <td><button class="action-button save-button btn btn-primary " onclick="saveRow(this)" disabled>Save</button></td>
+                <td><button class="action-button edit-button btn btn-warning" onclick="editRow(this)">Edit</button></td>
+                <td><button class="action-button stop-button btn btn-danger" onclick="stopRow(this)">Stop</button></td>
+            </tr>
+            <tr class="humiditysoil  " data-row-id="row4">
+                <td class="">Soil Moisture</td>
+                <td class="select-cell">
+                    
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Mark</label>
+                        <select class="form-select" id="inputGroupSelect01" disabled>
+                          <option selected></option>
+                          <option value="<">&lt;</option>
+                          <option value=">">&gt;</option>
+                          <option value="=">=</option>
+                        </select>
+                      </div>
+                </td>
+                <td class="number-cell">
+                    <input type="number" disabled placeholder="Enter Value" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                </td>
+                <td>White</td>
+                <td>On</td>
+                <td><button class="action-button save-button btn btn-primary" onclick="saveRow(this)" disabled>Save</button></td>
+                <td><button class="action-button edit-button btn btn-warning" onclick="editRow(this)">Edit</button></td>
+                <td><button class="action-button stop-button btn btn-danger" onclick="stopRow(this)">Stop</button></td>
+            </tr>
+            <tr class="raindrops " data-row-id="row5">
+                <td class=" ">Raindrops</td>
+                <td class="select-cell">
+                 
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Mark</label>
+                        <select class="form-select" id="inputGroupSelect01" disabled>
+                          <option selected></option>
+                          <option value="<">&lt;</option>
+                          <option value=">">&gt;</option>
+                          <option value="=">=</option>
+                        </select>
+                      </div>
+                </td>
+                <td class="number-cell">
+                    <input type="number" disabled placeholder="Enter Value" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                </td>
+                <td>Blue</td>
+                <td>On</td>
+                <td><button class="action-button save-button btn btn-primary" onclick="saveRow(this)" disabled>Save</button></td>
+                <td><button class="action-button edit-button btn btn-warning" onclick="editRow(this)">Edit</button></td>
+                <td><button class="action-button stop-button btn btn-danger" onclick="stopRow(this)">Stop</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function editRow(button) {
+            var row = button.closest('tr');
+            var inputs = row.querySelectorAll('.select-cell select, .number-cell input');
+            inputs.forEach(function(input) {
+                input.disabled = false;
+            });
+            button.disabled = true;
+            var saveButton = row.querySelector('.save-button');
+            saveButton.disabled = false;
+        }
+
+        function saveRow(button) {
+            var row = button.closest('tr');
+            var inputs = row.querySelectorAll('.select-cell select, .number-cell input');
+            inputs.forEach(function(input) {
+                input.disabled = true;
+            });
+            var editButton = row.querySelector('.edit-button');
+            editButton.disabled = false;
+            button.disabled = true;
+
+            // تخزين القيم في التخزين المحلي لكل صف
+            var rowId = row.getAttribute('data-row-id');
+            var mark = row.querySelector('.select-cell select').value;
+            var number = row.querySelector('.number-cell input').value;
+            var rowData = { mark: mark, number: number , disabled: row.classList.contains('disabled-row')  };
+            localStorage.setItem(rowId, JSON.stringify(rowData));
+
+            // استدعاء التحقق فقط لهذا الصف
+            if (!rowData.disabled) {
+                fetchValuesAndCompare(row, rowId, mark, number);
+            }
+        }
+
+        function stopRow(button) {
+            var row = button.closest('tr');
+            row.classList.toggle('disabled-row'); // تغيير المظهر للإشارة إلى التعطيل
+            
+            // تعطيل الشروط المحددة
+            var isDisabled = row.classList.contains('disabled-row');
+            var inputs = row.querySelectorAll('.select-cell select, .number-cell input');
+            inputs.forEach(function(input) {
+                input.disabled = isDisabled;
+            });
+
+            // تعيين القيم إلى "=" و -1 عندما يكون الصف معطلاً
+            var hiddenMark = "=";
+            var hiddenValue = -1;
+
+            // حفظ القيم الجديدة في localStorage
+            var rowId = row.getAttribute('data-row-id');
+            var storedData = localStorage.getItem(rowId);
+            var rowData = storedData ? JSON.parse(storedData) : {};
+
+            if (isDisabled) {
+                rowData.hiddenMark = hiddenMark;
+                rowData.hiddenValue = hiddenValue;
+            } else {
+                rowData.hiddenMark = rowData.mark;
+                rowData.hiddenValue = rowData.number;
+            }
+            rowData.disabled = isDisabled;
+            localStorage.setItem(rowId, JSON.stringify(rowData));
+        }
+
+        function sendApiRequest(url) {
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('API request successful:', data);
+                    if (callback) {
+                        callback(data);
+                    }
+                })
+                .catch(error => {
+                    console.error('API request failed:', error);
+                });
+        }
+
+        function fetchValuesAndCompare(row, rowId, mark, number) {
+            var storedData = localStorage.getItem(rowId);
+            if (!storedData) {
+                console.error(`No stored data for ${rowId}`);
+                return;
+            }
+
+            var rowData = JSON.parse(storedData);
+
+            if (rowData.disabled) {
+                console.log(`${rowId} is disabled, using hidden values for comparison.`);
+                mark = rowData.hiddenMark;
+                number = rowData.hiddenValue;
+            }
+
+            // تعديل URL بناءً على rowId
+            var apiFieldUrl = '';
+            var dataStreamId = 0;
+            var fieldId = 0;
+
+            if (rowId === 'row1') {
+                apiFieldUrl = 'https://api.thingspeak.com/channels/2442490/fields/1.json?results=1';
+                dataStreamId = 1;
+                fieldId = 1;
+               vId = 'v0';
+            } else if (rowId === 'row2') {
+                apiFieldUrl = 'https://api.thingspeak.com/channels/2442490/fields/2.json?results=1';
+                dataStreamId = 2;
+                fieldId = 2;
+               vId = 'v1';
+            } else if (rowId === 'row3') {
+                apiFieldUrl = 'https://api.thingspeak.com/channels/2442490/fields/3.json?results=1';
+                dataStreamId = 3;
+                fieldId = 3;
+               vId = 'v2';
+            } else if (rowId === 'row4') {
+                apiFieldUrl = 'https://api.thingspeak.com/channels/2442490/fields/4.json?results=1';
+                dataStreamId = 4;
+                fieldId = 4;
+               vId = 'v3';
+            } else if (rowId === 'row5') {
+                apiFieldUrl = 'https://api.thingspeak.com/channels/2442490/fields/5.json?results=1';
+                dataStreamId = 5;
+                fieldId = 5;
+               vId = 'v4';
+            }
+
+            fetch(apiFieldUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.feeds && data.feeds.length > 0 && data.feeds[0]['field' + fieldId] !== null) {
+                        let value = parseInt(data.feeds[0]['field' + fieldId], 10);
+                        if (!isNaN(value)) {
+                            console.log(`Fetched value for ${rowId}:`, value);
+
+                            let conditionMet = false;
+                            let parsedNumber = parseInt(number, 10);
+                            console.log("Comparing:", value, mark, parsedNumber);
+
+                            if (mark === '<' && value < parsedNumber) {
+                                conditionMet = true;
+                            } else if (mark === '>' && value > parsedNumber) {
+                                conditionMet = true;
+                            } else if (mark === '=' && value === parsedNumber) {
+                                conditionMet = true;
+                            }
+
+                            if (conditionMet) {
+                                sendApiRequest(`https://blynk.cloud/external/api/update?token=E3bfxcvzSVXdAemNAUI8c18VfK5KWvEB&dataStreamId=${dataStreamId}&value=1`);
+                                row.style.backgroundColor = '#d4edda'; // لون أخضر فاتح لإظهار تحقق الشرط
+                                console.log(`Condition met for ${rowId}, row highlighted.`);
+                            } else {
+                                // شرط عدم تحقق، نرسل طلب القيمة 0
+                                sendApiRequest(`https://blynk.cloud/external/api/get?token=E3bfxcvzSVXdAemNAUI8c18VfK5KWvEB&${vId}`, (apiData) => {
+                                    let newValue = apiData; // استخدام القيمة من API
+                                    sendApiRequest(`https://blynk.cloud/external/api/update?token=E3bfxcvzSVXdAemNAUI8c18VfK5KWvEB&dataStreamId=${dataStreamId}&value=${newValue}`);
+                                });
+                                row.style.backgroundColor = ''; // إعادة اللون الأصلي للسطر
+                                console.log(`Condition not met for ${rowId}, row not highlighted.`);
+                            }
+                        } else {
+                            console.error(`Invalid value received for ${rowId}:`, data.feeds[0]['field' + fieldId]);
+                        }
+                    } else {
+                        console.error(`No data received for ${rowId}`);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // فحص دوري للبيانات كل نصف دقيقة (30 ثانية)
+        function periodicCheck() {
+            var rows = document.querySelectorAll('tbody tr');
+            rows.forEach(function(row) {
+                var rowId = row.getAttribute('data-row-id');
+                var storedData = localStorage.getItem(rowId);
+                if (storedData) {
+                    var rowData = JSON.parse(storedData);
+                    if (!rowData.disabled) {
+                        fetchValuesAndCompare(row, rowId, rowData.mark, rowData.number);
+                    } else {
+                        // إذا كان الصف معطلاً، استخدم القيم المخفية
+                        fetchValuesAndCompare(row, rowId, rowData.hiddenMark, rowData.hiddenValue);
+                    }
+                }
+            });
+        }
+
+        // عند تحميل الصفحة، استرجع القيم المخزنة وقم بإعادة التحقق من كل صف
+        window.onload = function() {
+            var rows = document.querySelectorAll('tbody tr');
+            rows.forEach(function(row) {
+                var rowId = row.getAttribute('data-row-id');
+                var storedData = localStorage.getItem(rowId);
+                if (storedData) {
+                    var rowData = JSON.parse(storedData);
+                    row.querySelector('.select-cell select').value = rowData.mark;
+                    row.querySelector('.number-cell input').value = rowData.number;
+                    if (rowData.disabled) {
+                        row.classList.add('disabled-row');
+                        row.querySelectorAll('.select-cell select, .number-cell input').forEach(function(input) {
+                            input.disabled = true;
+                        });
+                    } else {
+                        fetchValuesAndCompare(row, rowId, rowData.mark, rowData.number);
+                    }
+                }
+            });
+
+            setInterval(periodicCheck, 300); // 30000 ميلي ثانية = 30 ثانية
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

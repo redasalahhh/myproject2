@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/pngtree-agricultural-technology-mobile-phone-synthesis-background-image_784693.jpg">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Devices Control</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+         
+            height: 100%;
+            background-color: #f0f0f0;
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            font-family: cursive;
+        
+         
+        }
+        .container {
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color:  rgb(218, 210, 210);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .button {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .green { border-color: green;}
+        .orange { border-color: orange;}
+        .red { border-color: red;}
+        .white { border-color: blue;}
+
+       
+        .mo{
+            font-size: 20px;
+            font-weight: 900;
+        }
+        .title{
+            font-size: 40px;
+        }
+
+        
+    
+        
+    </style>
+</head>
+<body>
+    <div class="ankor">
+
+        <a href="./ThreeChannel.html">
+            <button class="btn btn-danger">
+                back
+               </button>
+        </a>
+
+    <div class="container">
+        <div class="title ">Devices Control </div>
+        <img src="./img/fan.png" class="w-25 mx-5" alt="">
+        <img src="./img/led (1).png" class="w-25 mx-4" alt="">
+        <div class="button-container">
+           
+            
+            <div class="button fan btn btn btn-outline-success" onclick="toggleFan(this)">
+           
+                Fan Off
+
+            </div>
+            
+            <div class="button orange   btn btn-outline-warning "  onclick="toggleDevice(this, 2)">Orange OFF</div>
+        </div>
+        <img src="./img/led.png" class="w-25 mx-5" alt="">
+        <img src="./img/led (2).png" class="w-25 mx-4" alt="">
+        <div class="button-container">
+            <div class="button red btn btn-outline-danger"  onclick="toggleDevice(this, 3)">Red OFF</div>
+            <div class="button btn btn-outline-light"    onclick="toggleDevice(this, 4)">White OFF</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Restore button states from local storage
+            restoreButtonStates();
+        });
+
+        function toggleFan(button) {
+            var currentState = button.textContent.trim();
+            var newState, value;
+            if (currentState === "Fan OFF") {
+                newState = "Fan ON";
+                value = 1;
+            } else {
+                newState = "Fan OFF";
+                value = 0;
+            }
+            button.textContent = newState;
+            var url = "https://blynk.cloud/external/api/update?token=E3bfxcvzSVXdAemNAUI8c18VfK5KWvEB&dataStreamId=1&value=" + value;
+            fetch(url);
+            // Save button state to local storage
+            saveButtonState(button.className, newState);
+        }
+
+        function toggleDevice(button, dataStreamId) {
+            var currentState = button.textContent.trim();
+            var newState, value;
+            if (currentState.endsWith("OFF")) {
+                newState = currentState.replace("OFF", "ON");
+                value = 1;
+            } else {
+                newState = currentState.replace("ON", "OFF");
+                value = 0;
+            }
+            button.textContent = newState;
+            var url = "https://blynk.cloud/external/api/update?token=E3bfxcvzSVXdAemNAUI8c18VfK5KWvEB&dataStreamId=" + dataStreamId + "&value=" + value;
+            fetch(url);
+            // Save button state to local storage
+            saveButtonState(button.className, newState);
+        }
+
+        function saveButtonState(buttonClass, state) {
+            localStorage.setItem(buttonClass, state);
+        }
+
+        function restoreButtonStates() {
+            var buttons = document.querySelectorAll('.button');
+            buttons.forEach(function(button) {
+                var savedState = localStorage.getItem(button.className);
+                if (savedState) {
+                    button.textContent = savedState;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

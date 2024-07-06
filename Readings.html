@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/pngtree-agricultural-technology-mobile-phone-synthesis-background-image_784693.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+
+ <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Readings</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f0f0f0;
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: cursive;
+        }
+        .container {
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            
+        }
+        .metric {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            flex: 1;
+            font-size: 20px;
+        }
+        .metric-value {
+            flex: 1;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    
+        .progress1 {
+            height: 100%;
+            background-color:  #00e632; 
+        }
+        .progress2 {
+            height: 100%;
+            background-color:  #5750b3; /* Change color based on metric */
+        }
+        .progress3 {
+            height: 100%;
+            background-color:  #b350a6; /* Change color based on metric */
+        }
+        .progress4 {
+            height: 100%;
+            background-color:  #019ffa; /* Change color based on metric */
+        }
+        .progress5 {
+            height: 100%;
+            background-color:  #e07006; /* Change color based on metric */
+        }
+        .carousel-control-prev {
+        color: rgb(252, 252, 252);
+        }
+       
+        .ankor .ankor1{
+            margin-left: 100px;
+            background-color: #5750b3;
+        }
+
+     
+/* ///////////////////////////////////////////////////////////////////////////// */
+.homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:17% ;
+            
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+           font-weight: 900;
+           font-size: 35px;
+           font-family: cursive;
+    
+            
+        }
+.row{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+}         
+.b-skills
+{
+	/* padding-top: 46px; */
+	text-align: center;
+}
+.b-skills:last-child { margin-bottom: -30px; }
+.b-skills h2 {
+     /* margin-bottom: 50px; */
+     font-weight: 900;
+     font-size: 40px;
+     font-family: cursive;
+     text-transform: uppercase;
+     color: black;
+    
+    }
+
+.skill-item
+{
+	position: relative;
+	max-width: 250px;
+	width: 100%;
+	margin-bottom: 30px;
+	color: black;
+}
+.skill-item p
+{
+font-size: 22px;
+
+}
+
+.chart-container
+{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+	margin-bottom: 27px;
+}
+
+.skill-item .chart,
+.skill-item .chart canvas
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.skill-item .chart:before
+{
+	content: "";
+	width: 0;
+	height: 100%;
+}
+
+.skill-item .chart:before,
+.skill-item .percent
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.skill-item .percent
+{
+	position: relative;
+	line-height: 1;
+	font-size: 40px;
+	font-weight: 900;
+	z-index: 2;
+}
+
+.skill-item  .percent:after
+{
+	content: attr(data-after);
+	font-size: 20px;
+}      
+       p{
+           font-weight: 900;
+       }
+       
+       
+       
+.one{
+    background-color: rgb(218, 210, 210);
+  
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    margin: 5px;
+    height: 55vh;
+    border-radius: 20px;
+    
+
+    
+       }
+       .bor{
+        border-radius: 40px;
+       }
+.imgrefreach{
+    width: 40px;
+}
+.home{
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px 0 0;
+        }
+
+
+
+        @media screen and (max-width:1000px){ 
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f0f0f0;
+            background-image: url(./img/picture/pexels-nc-farm-bureau-mark-2749165.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: cursive;
+        }
+            .homepage{
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            width:100% ;
+            
+            color: black;
+            background-color: rgb(218, 210, 210);
+            border-radius:  0 0 20px 20px;
+    
+            
+        }
+        .homepage h1{
+           font-weight: 900;
+           font-size: 35px;
+           font-family: cursive;
+    
+            
+        }
+            .home{
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px 0 0;
+        }
+        .row{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-right: 0;
+    
+          }   
+          .one{
+    background-color: rgb(218, 210, 210);
+  
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    /* margin: 5px; */
+    height: 40vh;
+    border-radius: 20px;
+       }  
+       #percent5, #percent4{
+        font-size: 22px;
+       }
+    }
+    
+        
+        </style>
+</head>
+<body>
+    
+
+<div class="b-skills">
+    <div class="cccc">
+    
+
+           <div class="homepage">
+            <img class="home" src="./img/speedometer.png" alt="">
+            <h1>Readings</h1>
+        
+           </div>
+
+           
+          <img src="./img/loading-arrow.pngz" onclick="refreshPage()" class="imgrefreach" alt="">
+        
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 one">
+                <div class="skill-item center-block">
+                    <div class="chart-container">
+                        <div class="chart " id="temprature1" data-percent="" data-bar-color="#23afe3">
+                            <span class="percent" id="percent1" data-after="°C"></span>
+                            <img class="w-25" src="./img/temprature.png" alt="">
+                        </div>
+                    </div>
+
+                    <p>Temperature</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 one">
+                <div class="skill-item center-block">
+                    <div class="chart-container">
+                        <div class="chart " id="Humidity1"  data-percent="" data-bar-color="deeppink">
+                            <span class="percent" id="percent2"  data-after="%"></span>
+                            <img src="./img/humidity.png" class="w-25" alt="">
+                        </div>
+                    </div>
+
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 one">
+                <div class="skill-item center-block">
+                    <div class="chart-container">
+                        <div class="chart "  id="Gas1"  data-percent="" data-bar-color="#ff4241">
+                            <span class="percent" id="percent3" data-after="ppm"></span>
+                            <img src="./img/240_F_628287099_QrkJ9eQvNJDoT5L122P5CwjHEc18fUqD.jpg" class="w-25 bor" alt="">
+                        </div>
+                    </div>
+
+                    <p>Gas</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 one">
+                <div class="skill-item center-block">
+                    <div class="chart-container">
+                        <div class="chart " id="Humidity Soil1"  data-percent="" data-bar-color="#edc214">
+                            <span class="percent" id="percent4" data-after=""></span>
+                            <img src="./img/humidity (1).png" class="w-25" alt="">
+                        </div>
+                    </div>
+
+                    <p>Soil Moisture</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 one">
+                <div class="skill-item center-block">
+                    <div class="chart-container">
+                        <div class="chart " id="Raindrops1"  data-percent="" data-bar-color="blue">
+                            <span class="percent lin" id="percent5" data-after="m"></span>
+                            <img src="./img/cloud.png" class="w-25" alt="">
+                        </div>
+                    </div>
+
+                    <p>Raindrops</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="plugins/jquery-2.2.4.min.js"></script>
+<script src="plugins/jquery.appear.min.js"></script>
+<script src="plugins/jquery.easypiechart.min.js"></script> 
+  
+
+    <script>
+        
+        function fetchDataAndUpdate() {
+            
+            fetch('https://api.thingspeak.com/channels/2442490/fields/1.json?results=1')
+            .then(response => response.json())
+            .then(data => {
+                const temperature = parseInt(data.feeds[0].field1); 
+                document.getElementById('percent1').textContent = temperature + '°C';
+               
+                
+                var temprature1 = document.getElementById('temprature1');
+                temprature1.setAttribute('data-percent', temperature)
+            });
+
+            fetch('https://api.thingspeak.com/channels/2442490/fields/2.json?results=1')
+            .then(response => response.json())
+            .then(data => {
+                const humidity = parseInt(data.feeds[0].field2);
+                
+                document.getElementById('percent2').textContent = humidity + '%';
+                
+               
+
+                var humidity1 = document.getElementById('Humidity1');
+                humidity1.setAttribute('data-percent',humidity )
+               
+            });
+
+           
+            fetch('https://api.thingspeak.com/channels/2442490/fields/3.json?results=1')
+            .then(response => response.json())
+            .then(data => {
+                const gas = parseInt(data.feeds[0].field3); 
+                const g = gas/10
+                document.getElementById('percent3').textContent = g + '';
+                
+             
+                var gas1 = document.getElementById('Gas1');
+                gas1.setAttribute('data-percent',g )
+                 
+            });
+
+            
+            fetch('https://api.thingspeak.com/channels/2442490/fields/4.json?results=1')
+            .then(response => response.json())
+            .then(data => {
+                const humidity_soil = parseInt(data.feeds[0].field4); 
+                const hs = humidity_soil
+                document.getElementById('percent4').textContent = hs + '%';
+                
+         
+                var humidity_soil1  = document.getElementById('Humidity Soil1');
+                humidity_soil1.setAttribute('data-percent',hs )
+               
+            });
+
+          
+            fetch('https://api.thingspeak.com/channels/2442490/fields/5.json?results=1')
+            .then(response => response.json())
+            .then(data => {
+                const raindrops = parseInt(data.feeds[0].field5);
+                const r = raindrops
+                document.getElementById('percent5').textContent = r + '';
+                
+              
+                var raindrops1  = document.getElementById('Raindrops1');
+                raindrops1.setAttribute('data-percent',r )
+              
+            });
+
+        }
+
+       
+        fetchDataAndUpdate();
+
+    
+
+
+        var $window = $(window);
+
+function run()
+{
+	var fName = arguments[0],
+		aArgs = Array.prototype.slice.call(arguments, 1);
+	try {
+		fName.apply(window, aArgs);
+	} catch(err) {
+		 
+	}
+};
+ 
+/* chart
+================================================== */
+function _chart ()
+{
+	$('.b-skills').appear(function() {
+		setTimeout(function() {
+			$('.chart').easyPieChart({
+				easing: 'easeOutElastic',
+				delay: 10,
+				barColor: '#369670',
+				trackColor: '#fff',
+				scaleColor: false,
+				lineWidth: 21,
+				trackWidth: 21,
+				size: 250,
+				lineCap: 'round',
+				onStep: function(from, to, percent) {
+					this.el.children[0].innerHTML = Math.round(percent);
+				}
+			});
+		}, 1000);
+	});
+};
+ 
+
+$(document).ready(function() {
+  
+	run(_chart);
+  
+    
+});
+ 
+function refreshPage() {
+            location.reload();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+   
+    background-image: url(../img/04-15-28-91_1440x550.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .container {
+    width: 80%;
+    padding: 20px 0;
+  }
+  header {
+    background: #50b3a2;
+    color: white;
+    padding-top: 8px;
+    padding-left: 550px;
+    border-bottom: #e8491d 3px solid;
+   
+   
+}
+
+ 
+  header #branding h1 {
+    margin: 0;
+    
+  }
+
+  header .highlight{
+    color: #e8491d;
+    font-weight: bold;
+  }
+
+
+  .centerr{
+    text-align: center;
+    width: 50%;
+    background-color: #50b3a2;
+    margin:0 auto;
+    padding: 5px;
+    border-radius: 20px;
+    
+  }
+
+  .carousel-control-prev {
+    color: rgb(252, 252, 252);
+    
+    }
+   
+    .ankor .ankor1{
+        margin-left: 100px;
+        background-color: #5750b3;
+    }
+    .row{
+     
+      padding: 5px;
+    }
+  
+    .row input{
+      margin: 2px;
+      
+    }
+  
+
+.mo{
+    font-size: 20px;
+    font-weight: 900;
+}
+table{
+  
+  margin-left: 100px;
+ }
+ button a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #e8491d;
+ }
+
+ .test{
+  display: flex;
+  padding: 10px;
+ 
+ }
+ .samy{
+  width: 50%;
+ }
+ .samy2{
+  width: 100%;
+ }
+
+
+
+.fonts{
+  font-weight: 800;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width:600px)  {
+ 
+  header {
+    background: #5750b3;;
+    width: 100%;
+    color: white;
+    padding-top: 8px;
+    padding-left: 110px;
+  
+}
+.container1 {
+  width: 100%;
+  padding: 10px 0;
+
+}
+.centerr{
+  text-align: center;
+  width: 100%;
+  background-color: #50b3a2;
+  margin:0 auto;
+  
+  border-radius: 20px;
+  
+}
+.row{
+     
+  padding: 15px;
+
+}
+.samy{
+  width: 50%;
+}
+.samy2{
+  width: 100%;
+  margin: 20px;
+  font-size: 15px;
+}
+
+.token{
+  width: 100%;
+  margin: 0;
+ 
+
+}
+.container {
+  width: 100%;
+background-color: beige;
+}
+.token{
+  width: 100%;
+
+ 
+  font-size:6.6px;
+  font-weight: 900;
+}
+
+ }
