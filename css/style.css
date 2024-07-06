@@ -113,6 +113,10 @@ table{
 
 
  @media screen and (max-width:600px)  {
+   body {
+    font-family: cursive;
+  
+  }
  
   header {
     background: #5750b3;;
